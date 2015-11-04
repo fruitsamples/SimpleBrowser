@@ -33,31 +33,6 @@
 		};
 /* End PBXBuildRule section */
 
-/* Begin PBXBuildStyle section */
-		014F96C9005DB72811CA0E35 /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OPTIMIZATION_CFLAGS = "-O0";
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		014F96CA005DB72811CA0E35 /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
 		01B64032FF68026D11CA0E35 /* FSNodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSNodeInfo.h; sourceTree = "<group>"; };
 		01B64033FF68026D11CA0E35 /* FSNodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSNodeInfo.m; sourceTree = "<group>"; };
@@ -210,23 +185,6 @@
 			buildRules = (
 				734E636D049E6A7100C919A3 /* PBXBuildRule */,
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Prefix.h;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "Info-SimpleBrowser.plist";
-				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = SimpleBrowser;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = "-Wmost";
-				WRAPPER_EXTENSION = app;
-			};
 			dependencies = (
 			);
 			name = SimpleBrowser;
@@ -241,15 +199,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = B69BDEBD08A2ECB3008AC9B5 /* Build configuration list for PBXProject "SimpleBrowser" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				014F96C9005DB72811CA0E35 /* Development */,
-				014F96CA005DB72811CA0E35 /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* BrowserTester */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				73E7C580049A8AF000C919A3 /* SimpleBrowser */,
 			);
@@ -314,7 +268,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B69BDEBA08A2ECB3008AC9B5 /* Development */ = {
+		B69BDEBA08A2ECB3008AC9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -340,9 +294,9 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		B69BDEBB08A2ECB3008AC9B5 /* Deployment */ = {
+		B69BDEBB08A2ECB3008AC9B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -364,46 +318,23 @@
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		B69BDEBC08A2ECB3008AC9B5 /* Default */ = {
+		B69BDEBE08A2ECB3008AC9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Prefix.h;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "Info-SimpleBrowser.plist";
-				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = SimpleBrowser;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = "-Wmost";
-				WRAPPER_EXTENSION = app;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
-			name = Default;
+			name = Debug;
 		};
-		B69BDEBE08A2ECB3008AC9B5 /* Development */ = {
+		B69BDEBF08A2ECB3008AC9B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
-			name = Development;
-		};
-		B69BDEBF08A2ECB3008AC9B5 /* Deployment */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Deployment;
-		};
-		B69BDEC008A2ECB3008AC9B5 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -411,22 +342,20 @@
 		B69BDEB908A2ECB3008AC9B5 /* Build configuration list for PBXNativeTarget "SimpleBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B69BDEBA08A2ECB3008AC9B5 /* Development */,
-				B69BDEBB08A2ECB3008AC9B5 /* Deployment */,
-				B69BDEBC08A2ECB3008AC9B5 /* Default */,
+				B69BDEBA08A2ECB3008AC9B5 /* Debug */,
+				B69BDEBB08A2ECB3008AC9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		B69BDEBD08A2ECB3008AC9B5 /* Build configuration list for PBXProject "SimpleBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B69BDEBE08A2ECB3008AC9B5 /* Development */,
-				B69BDEBF08A2ECB3008AC9B5 /* Deployment */,
-				B69BDEC008A2ECB3008AC9B5 /* Default */,
+				B69BDEBE08A2ECB3008AC9B5 /* Debug */,
+				B69BDEBF08A2ECB3008AC9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
